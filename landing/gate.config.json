@@ -1,0 +1,49 @@
+{
+  "heading": "Get all 12 scenarios x 3 steps (PDF + plain text)",
+  "fields": [
+    {
+      "name": "email",
+      "type": "email",
+      "required": true
+    },
+    {
+      "name": "newsletter",
+      "type": "checkbox",
+      "default": false,
+      "label": "newsletter"
+    }
+  ],
+  "button": "Send me the pack",
+  "under_button": "One email with a link. No call, no booking.",
+  "confirmation": "Your pack is on its way to {email}",
+  "after_submit_preview": "step 2 of the same scenario",
+  "list_add": "newsletter_optin",
+  "abuse": {
+    "honeypot": true,
+    "disposable_email_block": true,
+    "per_ip_per_hour": 10
+  },
+  "caps": {
+    "email_per_day": 500,
+    "email_per_month": 5000,
+    "at_cap": "We're at capacity, join the waitlist"
+  },
+  "posthog_events": [
+    {
+      "name": "chase_pack_preview_used",
+      "properties": ["scenario"]
+    },
+    {
+      "name": "chase_pack_submit"
+    },
+    {
+      "name": "chase_pack_email_sent"
+    },
+    {
+      "name": "chase_pack_pack_opened"
+    },
+    {
+      "name": "chase_pack_copy_clicked"
+    }
+  ]
+}

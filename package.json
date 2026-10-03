@@ -1,0 +1,49 @@
+{
+  "name": "chase-email-templates",
+  "version": "0.1.0",
+  "description": "12 follow-up email scenarios, each with a first nudge, a second reminder, and a final notice.",
+  "type": "module",
+  "license": "MIT",
+  "author": "KiloAgent",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiloAgent/chase-email-templates.git"
+  },
+  "homepage": "https://www.kiloagent.com/tools/chase-emails",
+  "bugs": {
+    "url": "https://github.com/KiloAgent/chase-email-templates/issues"
+  },
+  "keywords": [
+    "chase",
+    "email",
+    "templates",
+    "follow-up",
+    "skill"
+  ],
+  "files": [
+    "build/merge.js",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./build/merge.js",
+    "./merge": "./build/merge.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "generate": "python3 build/gen.py",
+    "lint": "python3 build/lint.py",
+    "build": "python3 build/pack.py",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "evals": "vitest run skills/chase-email-templates/evals"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.8",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "allowed_fields": [
+    "document_name",
+    "due_date",
+    "project_or_ref",
+    "recipient_first_name",
+    "review_link",
+    "sender_company",
+    "sender_name"
+  ]
+}
